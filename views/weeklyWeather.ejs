@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles.css" />
+    <title>Weekly Weather For Three Cities</title>
+  </head>
+
+  <body>
+    <table class="styled-table">
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>Location</th>
+          <th>Weather</th>
+          <th>Feellike</th>
+          <th>POP</th>
+          <th>Wind</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- First loop : iterating an objected called 'weeklyWeather' to get days-->
+        <!-- Second loop : iterating an objected called 'weeklyWeather[day]' to get cities-->
+        <!-- Third loop : iterating an objected called 'weeklyWeather[day][city]' to get each information from each city->
+        <% for (const day in weeklyWeather) { %> <% for (const city in
+        weeklyWeather[day]) { %>
+        <tr>
+          <% for (const key in weeklyWeather[day][city]) {%>
+          <td><%= weeklyWeather[day][city][key] %></td>
+          <% } %>
+        </tr>
+        <% } %> <% } %>
+      </tbody>
+    </table>
+  </body>
+</html>

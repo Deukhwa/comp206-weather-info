@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Sunny Days</title>
+  </head>
+  <body>
+    <h1><%=data.city%> Suuny Days are followings :</h1>
+    <table class="styled-table">
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>Location</th>
+          <th>Weather</th>
+          <th>Feellike</th>
+          <th>POP</th>
+          <th>Wind</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- sunnyArr : an array consisting of objects which turns out 'sunny day' -->
+        <!-- loop through the arrya to get an each object and then iterating one more to display each weather information -->
+        <%sunnyArr.forEach(dayObj => {%>
+        <tr>
+          <%for(const key in dayObj) {%>
+          <td><%=dayObj[key]%></td>
+          <%}%>
+        </tr>
+        <%}) %>
+      </tbody>
+    </table>
+  </body>
+</html>

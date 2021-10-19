@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Weather Forecast</title>
+  </head>
+  <body>
+    <h1>Weather Information</h1>
+    <div class="container">
+      <h3>Click any city that you want to see</h3>
+      <a href="/weather/kingston">Kingston Weather</a>
+      <a href="/weather/toronto">Toronto Weather</a>
+      <a href="/weather/ottawa">Ottawa Weather</a>
+    </div>
+
+    <!-- I could use a button element, but instead made an a link as a submit button-->
+    <!-- Find warmest location for a given day -->
+    <div class="container">
+      <form id="form1" action="findWarmestLocation" method="post">
+        <h3>Find Warmest Location for a Day</h3>
+        <input type="radio" name="day" value="monday" /><label for="day"
+          >Monday</label
+        >
+        <input type="radio" name="day" value="tuesday" /><label for="day"
+          >Tuesday</label
+        >
+        <input type="radio" name="day" value="wednesday" /><label for="day"
+          >Wednesday</label
+        >
+        <input type="radio" name="day" value="thursday" /><label for="day"
+          >Thursday</label
+        >
+        <input type="radio" name="day" value="friday" /><label for="day"
+          >Friday</label
+        >
+        <input type="radio" name="day" value="saturday" /><label for="day"
+          >Saturday</label
+        >
+        <input type="radio" name="day" value="sunday" /><label for="day"
+          >Sunday</label
+        >
+        <a href="#" onclick="document.getElementById('form1').submit();"
+          >Submit!</a
+        >
+      </form>
+    </div>
+
+    <!-- Find warmest day for a given location -->
+    <div class="container">
+      <form id="form2" action="findWarmestDay" method="post">
+        <h3>Find Warmest Day for a city</h3>
+        <input type="radio" name="city" value="kingston" /><label for="city"
+          >Kingston</label
+        >
+        <input type="radio" name="city" value="ottawa" /><label for="city"
+          >Ottawa</label
+        >
+        <input type="radio" name="city" value="toronto" /><label for="city"
+          >Toronto</label
+        >
+        <a href="#" onclick="document.getElementById('form2').submit();"
+          >Submit!</a
+        >
+      </form>
+    </div>
+
+    <!-- Find average weekly temperature for each of the locations -->
+    <div class="container">
+      <form id="form3" action="findAverageTemp" method="post">
+        <h3>Select a Ctiy to See the Average Temperature</h3>
+        <input type="radio" name="city" value="kingston" /><label for="city"
+          >Kingston</label
+        >
+        <input type="radio" name="city" value="ottawa" /><label for="city"
+          >Ottawa</label
+        >
+        <input type="radio" name="city" value="toronto" /><label for="city"
+          >Toronto</label
+        >
+        <a href="#" onclick="document.getElementById('form3').submit();"
+          >Submit!</a
+        >
+      </form>
+    </div>
+
+    <!-- Find all the sunny days in the week for a given location -->
+    <div class="container">
+      <form id="form4" action="findSunnyDays" method="post">
+        <h3>Select a Ctiy to See Which Days Are Sunny Days</h3>
+        <input type="radio" name="city" value="kingston" /><label for="city"
+          >Kingston</label
+        >
+        <input type="radio" name="city" value="ottawa" /><label for="city"
+          >Ottawa</label
+        >
+        <input type="radio" name="city" value="toronto" /><label for="city"
+          >Toronto</label
+        >
+        <a href="#" onclick="document.getElementById('form4').submit();"
+          >Submit!</a
+        >
+      </form>
+    </div>
+  </body>
+</html>
